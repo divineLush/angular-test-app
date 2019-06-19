@@ -1,17 +1,13 @@
 .header {
     background-color: antiquewhite;
     text-align: center;
-    color: darkmagenta;
-    padding: 0px;
-    margin: 0px;
+    color: rgb(197, 119, 197);
 }
 
 .pannier {
-    background-color: aquamarine;
+    background-color: rgb(136, 233, 199);
     text-align: center;
-    color: fuchsia;
-    padding: 0px;
-    margin: 0px;
+    color: rgb(233, 75, 233);
 }
 
 .items {
@@ -20,5 +16,5 @@
 }
 
 .btn {
-    background-color: plum;
+    background-color: rgb(226, 85, 226);
 }

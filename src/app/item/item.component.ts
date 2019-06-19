@@ -2,6 +2,8 @@ import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
 
 import { Book, PurchasedBook } from '../book';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import { WindowComponent } from './window/window.component';
 
 @Component({
   selector: 'app-item',
@@ -11,10 +13,8 @@ import { NgForm } from '@angular/forms';
 export class ItemComponent implements OnInit {
   @Input() data: Book;
   @Output() onItemAdded: EventEmitter<PurchasedBook>;
-  more: boolean;
 
-  constructor() {
-    this.more = false;
+  constructor(public dialog: MatDialog) {
     this.onItemAdded = new EventEmitter();
   }
 
@@ -22,7 +22,7 @@ export class ItemComponent implements OnInit {
   }
 
   toggleInfo(): void {
-    this.more = !this.more;
+    this.dialog.open(WindowComponent, { data: this.data });
   }
 
   addItem(p: any): void {

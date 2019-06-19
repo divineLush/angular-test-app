@@ -1,0 +1,12 @@
+<div class="win">
+  <div>
+    <p>Subtitle: {{ data.subtitle }}</p>
+    <p>Isbn13: {{ data.isbn13 }}</p>
+    <p>Price: {{ data.price }}</p>
+    <a href="{{ data.url }}">Ссылочка</a>
+    <img src="{{ data.image }}" />
+  </div>
+  <div>
+    <button (click)="close()" class="btn">Закрыть</button>
+  </div>
+</div>
