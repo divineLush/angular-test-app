@@ -1,0 +1,22 @@
+<div class="item">
+  <div style="display: flex; justify-content: space-between">
+    <div>{{ data.title }}</div>
+    <div>
+      <button class="btn" (click)="toggleInfo()" *ngIf="!more">
+        Подробнее
+      </button>
+      <button class="btn" (click)="toggleInfo()" *ngIf="more">Скрыть</button>
+      <form #addForm="ngForm" (ngSubmit)="addItem(addForm.value)">
+        <button type="submit" class="btn">Добавить в корзину</button>
+        <input class="inp" type="number" name="quantity" placeholder="Количество товара" ngModel/>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="more" style="flex: right;">
+    <p>Subtitle: {{ data.subtitle }}</p>
+    <p>Isbn13: {{ data.isbn13 }}</p>
+    <p>Price: {{ data.price }}</p>
+    <a href="{{ data.url }}">Ссылочка</a>
+    <img src="{{ data.image }}" />
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.header {
+    background-color: antiquewhite;
+    text-align: center;
+    color: darkmagenta;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pannier {
+    background-color: aquamarine;
+    text-align: center;
+    color: fuchsia;
+    padding: 0px;
+    margin: 0px;
+}
+
+.items {
+    padding: 0px;
+    margin: 0px;
+}
+
+.btn {
+    background-color: plum;
+}

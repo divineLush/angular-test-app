@@ -1,0 +1,21 @@
+<div class="header">
+  <h1>{{ title }}</h1>
+</div>
+<div class="pannier" *ngIf="purchased == 0">
+  Ваша корзина пуста
+</div>
+<div class="pannier" *ngIf="purchased > 0">
+  В Вашей корзинке {{ purchased }} продуктов
+  <button class="btn" (click)="togglePurchasedBooks()" *ngIf="!more">Показать содержимое корзины</button>
+  <button class="btn" (click)="togglePurchasedBooks()" *ngIf="more">Скрыть содержимое корзины</button>
+  <div *ngIf="more">
+    <div *ngFor="let book of purchasedBooks">
+      <p>Title: {{ book.book.title }}</p>
+      <p>Quantity: {{ book.quantity }}</p>
+    </div>
+  </div>
+</div>
+<div class="items" *ngFor="let book of books">
+  <app-item [data]="book" (onItemAdded)="itemWasAdded($event)"></app-item>
+</div>
+<router-outlet></router-outlet>
