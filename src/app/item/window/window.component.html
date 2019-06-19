@@ -1,10 +1,11 @@
 <div class="win">
   <div>
-    <p>Subtitle: {{ data.subtitle }}</p>
-    <p>Isbn13: {{ data.isbn13 }}</p>
-    <p>Price: {{ data.price }}</p>
-    <a href="{{ data.url }}">Ссылочка</a>
-    <img src="{{ data.image }}" />
+    <span>Subtitle: {{ data.subtitle }}<br>
+      Isbn13: {{ data.isbn13 }} <br>
+      Price: {{ data.price }} <br>
+      <a href="{{ data.url }}">Ссылочка</a>
+      <img src="{{ data.image }}" />
+    </span>
   </div>
   <div>
     <button (click)="close()" class="btn">Закрыть</button>
