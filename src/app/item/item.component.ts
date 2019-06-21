@@ -26,6 +26,8 @@ export class ItemComponent implements OnInit {
   }
 
   addItem(p: any): void {
-    this.onItemAdded.emit({book: this.data, quantity: p.quantity});
+    if (p.quantity > 0) {
+      this.onItemAdded.emit({book: this.data, quantity: p.quantity});
+    }
   }
 }
