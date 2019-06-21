@@ -47,7 +47,18 @@ export class AppComponent implements OnInit {
   }
 
   itemWasAdded(book: PurchasedBook): void {
-    this.purchasedBooks.push(book);
-    this.purchased += book.quantity;
+    let index: number = -1;
+    this.purchasedBooks.forEach(i => {
+      if (i.book.title == book.book.title) {
+        index = this.purchasedBooks.indexOf(i);
+      }
+    })
+    if (index == -1) {
+      this.purchasedBooks.push(book);
+    }
+    else {
+      this.purchasedBooks[index].quantity += book.quantity;
+    }
+    this.purchased += book.quantity;   
   }
 }

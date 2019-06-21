@@ -1,6 +1,6 @@
-<div class="win">
+<div class="card win">
   <div>
-    <span>Subtitle: {{ data.subtitle }}<br>
+    <span class="card-text">Subtitle: {{ data.subtitle }}<br>
       Isbn13: {{ data.isbn13 }} <br>
       Price: {{ data.price }} <br>
       <a href="{{ data.url }}">Ссылочка</a>
@@ -8,6 +8,6 @@
     </span>
   </div>
   <div>
-    <button (click)="close()" class="btn">Закрыть</button>
+    <button (click)="close()" class="btn btn-dark btn">Закрыть</button>
   </div>
 </div>

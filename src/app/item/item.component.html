@@ -1,11 +1,13 @@
 <div class="item">
   <div style="display: flex; justify-content: space-between">
-    <div>{{ data.title }}</div>
+    <div (click)="toggleInfo()">{{ data.title }}</div>
     <div>
-      <button class="btn" (click)="toggleInfo()">Подробнее</button>
-      <form #addForm="ngForm" (ngSubmit)="addItem(addForm.value)">
-        <button type="submit" class="btn">Добавить в корзину</button>
-        <input class="inp" type="number" name="quantity" placeholder="Количество товара" ngModel/>
+      <!--
+        <button class="btn" (click)="toggleInfo()">Подробнее</button>
+      -->
+      <form #addForm="ngForm" (ngSubmit)="addItem(addForm.value)" style="display: flex">
+        <button type="submit" class="btn btn-secondary btn" style="width: 150px">Добавить</button>
+        <input class="form-control inp" type="number" name="quantity" placeholder="Количество товара" ngModel/>
       </form>
     </div>
   </div>

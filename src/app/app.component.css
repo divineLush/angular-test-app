@@ -1,4 +1,17 @@
 .header {
+    background-color: #05386b;
+    text-align: center;
+    color: #edf5e1;
+}
+
+.pannier {
+    background-color: #379683;
+    text-align: center;
+    color: #8ee4af;
+}
+
+/*
+.header {
     background-color: antiquewhite;
     text-align: center;
     color: rgb(197, 119, 197);
@@ -18,3 +31,4 @@
 .btn {
     background-color: rgb(226, 85, 226);
 }
+*/
