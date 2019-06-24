@@ -1,9 +1,8 @@
 <div class="item">
   <div style="display: flex; justify-content: space-between">
     <div (click)="toggleInfo()">{{ data.title }}</div>
-    <!--
+    <div style="display: flex">
       <button class="btn btn-info" (click)="toggleInfo()">Подробнее</button>
-    -->
       <form #addForm="ngForm" 
         ng-submit="addItem(addForm.value)"
         (ngSubmit)="addItem(addForm.value)" 
@@ -11,7 +10,9 @@
         <button type="submit" class="btn btn-secondary btn">Добавить</button>
         <input class="form-control inp" type="number" 
           name="quantity" placeholder="Количество товара"
+          style="width: 190px;"
           ngModel/>
       </form>
+    </div>
   </div>
 </div>
